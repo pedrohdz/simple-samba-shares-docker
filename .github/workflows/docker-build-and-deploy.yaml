@@ -30,7 +30,7 @@ jobs:
       # Code Quality
       # -----------------------------------------------------------------------
       - name: Run Super-Linter
-        uses: github/super-linter@v3
+        uses: github/super-linter@v4.3.0
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
