@@ -57,7 +57,7 @@ jobs:
       # -----------------------------------------------------------------------
       - name: Docker meta (Local registry)
         id: docker_metadata_localhost
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: crazy-max/ghaction-docker-meta@v3.4.0
         with:
           images: localhost:5000/${{ env.image_name }}
           tag-sha: true
@@ -109,7 +109,7 @@ jobs:
       - name: Docker meta (Docker Hub)
         if: env.IS_RELEASE == 'TRUE'
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: crazy-max/ghaction-docker-meta@v3.4.0
         with:
           images: pedrohdz/${{ env.image_name }}
           tag-sha: true
